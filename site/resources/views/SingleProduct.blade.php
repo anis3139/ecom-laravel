@@ -1,5 +1,12 @@
 @extends('layout.app')
+@section('title')
 
+@foreach($singleProduct as $singleProducts)
+
+{{$singleProducts->title}}
+@endforeach
+
+@endsection
 @section('content')
 
 
@@ -42,7 +49,7 @@
                     <input hidden type="text" id="pid" value="{{$singleProduct->id}}">
                     <p>{{$singleProduct->description}}</p>
 
-
+         <!--
                     <div class="product__details__quantity">
                         <div class="quantity">
                             <div class="pro-qty">
@@ -53,6 +60,8 @@
 
                     <a id="addtocart" class="primary-btn">ADD TO CART</a>
                     <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+           -->         
+                    <a id="wholesalesView" class="primary-btn ml-5 text-decoration-none" href="{{url("/wholeSalesviewPage")}}">Contact For Wholesales</a>
                     <ul>
                         <li><b>Availability</b> <span>In Stock</span></li>
                         <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
@@ -80,7 +89,16 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="product__details__tab__desc text-center">
-                                <p>{{$singleProduct->description}}</p>
+                                <p>
+                                
+                                <?php if ($singleProduct): ?>
+                                
+                                {!! nl2br(e($singleProduct->description)) !!}
+                                
+                                <?php endif; ?>
+                                
+                                
+                                </p>
                             </div>
                         </div>
 

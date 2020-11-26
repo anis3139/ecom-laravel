@@ -3469,5 +3469,28 @@ ol {
 
 
 
+.goog-te-banner-frame {
+    top:initial;
+    bottom: 0;
+    display: none;
+}
+
+.goog-te-gadget-icon{
+    display:none !important;
+}
+
+
+@media screen and (min-width: 768px) {
+  .wsdiv{
+    height:550px !important;
+}
+
+}
+
+
+
+
+
+
 
 

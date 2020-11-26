@@ -63,3 +63,127 @@ Route::post('stripe-payment', 'CheckoutController@handlePost')->name('checkout.c
 //order list
 
 Route::get('/orderlist', 'OrderController@Index')->middleware('userLoginCheck');
+
+
+
+//order list
+
+Route::get('/wholeSalesviewPage', 'wholeSalesviewPageController@Index');
+Route::post('/contactSend', 'wholeSalesviewPageController@contactSend');
+
+
+
+
+//Clear Cache facade value:
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>Cache facade value cleared</h1>';
+});
+
+//Reoptimized class loader:
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return '<h1>Reoptimized class loader</h1>';
+});
+
+//Route cache:
+Route::get('/route-cache', function() {
+    $exitCode = Artisan::call('route:cache');
+    return '<h1>Routes cached</h1>';
+});
+
+//Clear Route cache:
+Route::get('/route-clear', function() {
+    $exitCode = Artisan::call('route:clear');
+    return '<h1>Route cache cleared</h1>';
+});
+
+//Clear View cache:
+Route::get('/view-clear', function() {
+    $exitCode = Artisan::call('view:clear');
+    return '<h1>View cache cleared</h1>';
+});
+
+//Clear Config cache:
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return '<h1>Clear Config cleared</h1>';
+});
+
+
+//Clear Config cache:
+Route::get('/Storage-link', function() {
+    $exitCode = Artisan::call('storage:link');
+    return '<h1>Storage Link Created</h1>';
+});
+
+
+
+
+//Clear Cache facade value:
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>Cache facade value cleared</h1>';
+});
+
+//Reoptimized class loader:
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return '<h1>Reoptimized class loader</h1>';
+});
+
+//Route cache:
+Route::get('/route-cache', function() {
+    $exitCode = Artisan::call('route:cache');
+    return '<h1>Routes cached</h1>';
+});
+
+//Clear Route cache:
+Route::get('/route-clear', function() {
+    $exitCode = Artisan::call('route:clear');
+    return '<h1>Route cache cleared</h1>';
+});
+
+//Clear View cache:
+Route::get('/view-clear', function() {
+    $exitCode = Artisan::call('view:clear');
+    return '<h1>View cache cleared</h1>';
+});
+
+//Clear Config cache:
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return '<h1>Clear Config cleared</h1>';
+});
+
+
+//Clear Config cache:
+Route::get('/storage-link', function() {
+    $exitCode = Artisan::call('storage:link');
+    return '<h1>Storage Link Created</h1>';
+});
+
+
+
+
+//Clear Config cache:
+Route::get('/controller', function() {
+    $exitCode = Artisan::call('make:controller wholeSalesviewPageController');
+    return '<h1>controller Link Created</h1>';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

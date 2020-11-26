@@ -52,7 +52,7 @@ class BrandController extends Controller
             $photoPath =  $req->file('photo')->store('public');
             $photoName = (explode('/', $photoPath))[1];
             $host = $_SERVER['HTTP_HOST'];
-            $location = "http://" . $host . "/storage/" . $photoName;
+            $location = "http://" . $host . "/public/storage/" . $photoName;
             $result = BrandModel::where('id', '=', $id)->update(['brand_name' => $name, 'brand_des' => $description, 'brand_img' => $location]);
             if ($result == true) {
                 return 1;
@@ -69,29 +69,6 @@ class BrandController extends Controller
         }
 
 
-
-
-
-        // $id = $req->input('id');
-        // $project_name = $req->input('project_name');
-        // $project_des = $req->input('project_des');
-        // $project_link = $req->input('project_link');
-        // $project_img = $req->input('project_img');
-
-
-        // $result = BrandModel::where('id', '=', $id)->update([
-        //     'project_name' => $project_name,
-        //     'project_des' => $project_des,
-        //     'project_link' => $project_link,
-        //     'project_img' => $project_img
-
-        // ]);
-
-        // if ($result == true) {
-        //     return 1;
-        // } else {
-        //     return 0;
-        // }
     }
 
 
@@ -106,7 +83,7 @@ class BrandController extends Controller
         $photoPath =  $req->file('photo')->store('public');
         $photoName = (explode('/', $photoPath))[1];
         $host = $_SERVER['HTTP_HOST'];
-        $location = "http://" . $host . "/storage/" . $photoName;
+        $location = "http://" . $host . "/public/storage/" . $photoName;
         $result = BrandModel::insert([
             'brand_name' => $name,
             'brand_des' => $description,

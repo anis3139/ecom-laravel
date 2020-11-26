@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title','About')
 @section('content')
     <!-- Hero Section Begin -->
     @include('shop-component.Hero')

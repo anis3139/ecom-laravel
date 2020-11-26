@@ -7,7 +7,12 @@
                             <a href="./"><img src="<?php if ($othersData) {echo $othersData->logo;}?>" alt=""></a>
                         </div>
                         <ul>
-                            <li><?php if ($othersData) {echo $othersData->address;}?></li>
+                            <li><?php if ($othersData): ?>
+                                
+                                {!! nl2br(e($othersData->address)) !!}
+                                
+                                <?php endif; ?>
+                                </li>
                         </ul>
                     </div>
                 </div>

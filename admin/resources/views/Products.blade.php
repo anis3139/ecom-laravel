@@ -139,10 +139,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <input id="pdnameupdate" type="text" id="" class="form-control mb-3" placeholder="Product Name">
-                            <input id="pddesupdate" type="text" id="" class="form-control mb-3" placeholder="Product Description">
+                            <textarea id="pddesupdate" type="text" id="" class="form-control mb-3" placeholder="Product Description" cols="30" rows="10"></textarea>
                             <input id="pdpriceupdate" type="text" id="" class="form-control mb-3" placeholder="Product Price">
                             <input id="pdofferupdate" type="text" id="" class="form-control mb-3" placeholder="Offer Price">
                             <input id="pdquantityupdate" type="text" id="" class="form-control mb-3" placeholder="Product Quantity">
+                            
+                        </div>
+                        <div class="col-md-6">
                             <input id="pdslugupdate" type="text" id="" class="form-control mb-3" placeholder="Product slug">
                             <select id="pdfeatureupdate" style="margin-bottom: 10px;" class="browser-default custom-select">
                                 <option disabled selected>Select Product Feature</option>
@@ -150,8 +153,6 @@
                                 <option value="0">No</option>
 
                             </select>
-                        </div>
-                        <div class="col-md-6">
                             <select id="pdcategoryupdate" style="margin-bottom: 10px;" class="browser-default custom-select">
 
 

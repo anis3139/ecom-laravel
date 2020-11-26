@@ -31,13 +31,10 @@
                                         } ?>"><i class="fa fa-youtube"></i></a>
                         </div>
                         <div class="header__top__right__language">
-                            <img src="{{asset('client/images')}}/language.png" alt="">
-                            <div>English</div>
-                            <span class="arrow_carrot-down"></span>
-                            <ul>
-                                <li><a href="#">Spanis</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
+                            
+                          
+                                <p className="mt-1" id="google_translate_element"></p>
+                           
                         </div>
                         <div class="header__top__right__auth">
                             @if ($message = Session::get('user'))
@@ -72,6 +69,7 @@
                         @endif
 
                         <li><a href="/about">About Us</a></li>
+                        
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>

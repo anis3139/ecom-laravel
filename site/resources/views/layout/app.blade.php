@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>Asulsis | @yield('title')</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -91,7 +91,18 @@
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
     <script src="https://js.braintreegateway.com/web/dropin/1.13.0/js/dropin.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
-
+    <script>
+      function googleTranslateElementInit() {
+        var config={
+          pageLanguage:'es',
+          includedLanguages:'en,es,zh-CN,bn',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        };
+        var langOptionsID="google_translate_element";
+        new google.translate.TranslateElement(config,langOptionsID);
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
 
 </body>

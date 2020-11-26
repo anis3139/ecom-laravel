@@ -32,7 +32,7 @@ class PhotoController extends Controller
         $photoName = (explode('/', $photoPath))[1];
 
         $host = $_SERVER['HTTP_HOST'];
-        $location = "http://" . $host . "/storage/" . $photoName;
+        $location = "http://" . $host . "/public/storage/" . $photoName;
 
         $result = PhotoModel::insert(['location' => $location]);
         return $result;

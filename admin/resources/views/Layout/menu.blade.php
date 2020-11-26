@@ -21,6 +21,7 @@
                         <li> <a href="{{ url('/') }}"><span> <i class="fas fa-home"></i> </span><span class="hide-menu">Home</span></a></li>
                         <li> <a href="{{ url('/admin') }}"><span> <i class="fas fa-user"></i> </span><span class="hide-menu">Admin</span></a></li>
                         <li> <a href="{{ url('/visitor') }}"><span> <i class="fas fa-users"></i> </span><span class="hide-menu">Visitor</span></a></li>
+                        <li> <a href="{{ url('/contact') }}"><span> <i class="fas fa-mail-bulk"></i> </span><span class="hide-menu">Contact</span></a></li>
                         <li> <a href="{{ url('/category') }}"><span> <i class="fas fa-server"></i> </span><span class="hide-menu">Category</span></a></li>
                         <li> <a href="{{ url('/brand') }}"><span> <i class="fas fa-suitcase"></i> </span><span class="hide-menu">Brnad</span></a></li>
                         <li> <a href="{{ url('/products') }}"><span> <i class="fas fa-plus-circle"></i> </span><span class="hide-menu">Products</span></a></li>

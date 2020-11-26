@@ -54,7 +54,7 @@ class CategoryController extends Controller
             $photoPath =  $req->file('photo')->store('public');
             $photoName = (explode('/', $photoPath))[1];
             $host = $_SERVER['HTTP_HOST'];
-            $location = "http://" . $host . "/storage/" . $photoName;
+            $location = "http://" . $host . "/public/storage/" . $photoName;
 
             $result = CategoryModel::where('id', '=', $id)->update(['category_name' => $name, 'category_des' => $description, 'category_img' => $location]);
             if ($result == true) {
@@ -85,7 +85,7 @@ class CategoryController extends Controller
         $photoPath =  $req->file('photo')->store('public');
         $photoName = (explode('/', $photoPath))[1];
         $host = $_SERVER['HTTP_HOST'];
-        $location = "http://" . $host . "/storage/" . $photoName;
+        $location = "http://" . $host . "/public/storage/" . $photoName;
         $result = CategoryModel::insert([
             'category_name' => $name,
             'category_des' => $description,

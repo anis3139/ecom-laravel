@@ -7,7 +7,7 @@ use App\AdminModel;
 class LoginController extends Controller
 {
     function LoginIndex(){
-    	return view('login');
+    	return view('loginSasi');
     }
 
     function onLogout(Request $request){

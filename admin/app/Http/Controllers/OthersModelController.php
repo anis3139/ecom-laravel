@@ -143,7 +143,7 @@ class OthersModelController extends Controller
             $photoPath =  $req->file('photo')->store('public');
             $photoName = (explode('/', $photoPath))[1];
             $host = $_SERVER['HTTP_HOST'];
-            $location = "http://" . $host . "/storage/" . $photoName;
+            $location = "http://" . $host . "/public/storage/" . $photoName;
             if( count($valuecheck)>0){
             $result = OthersModel::where('id', '=',  $valuecheck['0']->id)->update(['logo' => $location]);
             } else{

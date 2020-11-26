@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title','Contact')
 @section('content')
     <!-- Hero Section Begin -->
     @include('shop-component.Hero')
@@ -23,7 +23,12 @@
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
                         <h4>Address</h4>
-                        <p><?php if ($othersData) {echo $othersData->address;}?></p>
+                        <p><?php if ($othersData): ?>
+                                
+                                {!! nl2br(e($othersData->address)) !!}
+                                
+                                <?php endif; ?>
+                                </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">

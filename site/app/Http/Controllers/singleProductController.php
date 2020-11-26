@@ -28,7 +28,7 @@ class singleProductController extends Controller
         ->select('products.id','products.title','products.category_id','products.description','products.slug','products.offer','products.quantity','products.price','products.images','category.category_name','brand.brand_name')
         ->join('category','category.id','=','products.category_id')
         ->join('brand','brand.id','=','products.brand_id')
-        ->where('products.id','=',$slug)
+        ->where('products.slug','=',$slug)
         ->get();
 
         $othersData= json_decode(OthersModel::orderBy('id', 'desc')->get()->first());
