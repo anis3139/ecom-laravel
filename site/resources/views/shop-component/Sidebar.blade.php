@@ -100,7 +100,7 @@
                                     
                                     <div class="latest-prdouct__slider__item">
                                        
-                                        <a href="{{route('product.view', $result->slug)}}" class="latest-product__item">
+                                        <a href="{{route('product.view', ['slug'=>$result->slug,'id'=>$result->id])}}" class="latest-product__item">
                                             <div class="latest-product__item__pic">
                                                 <img src="{{$result->images}}" alt="">
                                             </div>

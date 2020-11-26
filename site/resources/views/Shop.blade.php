@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>{{$result->category_name}}</span>
-                                            <h5><a href="/shop/{{$result->slug}}">{{$result->title}}</a></h5>
+                                            <h5><a href="{{route('product.view', ['slug'=>$result->slug,'id'=>$result->id])}}">{{$result->title}}</a></h5>
                                             <div class="product__item__price">${{$result->offer}} <span>${{$result->price}}</span></div>
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="{{route('product.view', $result->slug)}}">{{$result->title}}</a></h6>
+                                    <h6><a href="{{route('product.view', ['slug'=>$result->slug,'id'=>$result->id])}}">{{$result->title}}</a></h6>
                                     <h5>${{$result->price}}</h5>
                                 </div>
                             </div>

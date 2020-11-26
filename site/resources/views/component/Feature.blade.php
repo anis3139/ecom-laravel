@@ -6,7 +6,7 @@
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="{{$feature_product->images}}">
                             
-                            <h5><a href="/shop/{{$feature_product->slug}}/{{$feature_product->id}}">{{$feature_product->title}}</a></h5>
+                            <h5><a href="{{route('product.view', ['slug'=>$feature_product->slug,'id'=>$feature_product->id])}}">{{$feature_product->title}}</a></h5>
                         </div>
                     </div>
                     @endforeach
