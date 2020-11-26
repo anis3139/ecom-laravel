@@ -21,16 +21,16 @@
             </div>
             <div class="header__top__right__auth">
                 @if ($message = Session::get('user'))
-                            <a href="{{url('/logout')}}"><i class="fa fa-user"></i> Log Out</a>
-                            @else
-                            <a href="{{url('/login')}}"><i class="fa fa-user"></i> Login</a>
-                            @endif
+                <a href="{{url('/logout')}}"><i class="fa fa-user"></i> Log Out</a>
+                @else
+                <a href="{{url('/login')}}"><i class="fa fa-user"></i> Login</a>
+                @endif
             </div>
         </div>
        <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><a href="{{ route('shop') }}">Shop</a></li>
                 <!--<li><a href="#">Pages</a>-->
                 <!--    <ul class="header__menu__dropdown">-->
                 <!--        <li><a href="./shop-details.html">Shop Details</a></li>-->

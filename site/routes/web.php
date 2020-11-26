@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 // Client Route
 Route::get('/', 'HomeController@HomeIndex');
-Route::get('/shop', 'ShopController@ShopIndex');
+Route::get('/shop', 'ShopController@ShopIndex')->name('shop');
 Route::get('/shop/{slug}/{id}', 'singleProductController@SingleProductIndex')->name('product.view');
 Route::get('/contact', 'ContactController@contactIndex');
 Route::get('/about', 'AboutController@aboutIndex');
