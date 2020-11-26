@@ -46,6 +46,8 @@ class HomeController extends Controller
             ->where('products.feature_product', '=', 1)
             ->get();
 
+            // dd($feature_products);
+
 
 
         return View('index', [

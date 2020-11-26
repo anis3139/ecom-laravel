@@ -33,7 +33,7 @@
             <div id="myBox" class="row featured__filter">
            
                 @foreach($results as $result)
-                <a id="xx" style="  display: none !important; "  href="{{route('product.view', $result->slug)}}">
+                <a id="xx" style="  display: none !important; "  href="{{route('product.view', ['slug'=>$result->slug,'id'=>$result->id])}}">
                     <div   class="col-lg-3 col-md-4 col-sm-6 mix {{$result->category_name}}">
                  
                         <div class="featured__item">
@@ -47,7 +47,7 @@
                             </div>
                         
                             <div class="featured__item__text">
-                                <h6><a href="{{route('product.view', $result->slug)}}">{{$result->title}}</a></h6>
+                                <h6><a href="{{route('product.view', ['slug'=>$result->slug,'id'=>$result->id])}}">{{$result->title}}</a></h6>
                                 <h5>{{$result->price}}</h5>
                                 <h5>{{$result->category_name}}</h5>
                                 <h5>{{$result->brand_name}}</h5>
