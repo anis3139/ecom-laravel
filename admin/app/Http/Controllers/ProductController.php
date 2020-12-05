@@ -94,7 +94,7 @@ class ProductController extends Controller
             $photoPath =  $req->file('image')->store('public');
             $photoName = (explode('/', $photoPath))[1];
             $host = $_SERVER['HTTP_HOST'];
-            $location = "http://" . $host . "/public/storage/" . $photoName;
+            $location = "http://" . $host . "/storage/" . $photoName;
 
             $result = ProductModel::where('id', '=', $id)->update(['title' => $title, 'description' => $description, 'price' => $price, 'offer' => $offer, 'quantity' => $quantity, 'slug' => $slug, 'feature_product' => $feature_product, 'category_id' => $cat_id, 'brand_id' => $brand_id, 'status' => $status, 'images' => $location]);
 
@@ -153,8 +153,8 @@ class ProductController extends Controller
             $photoPath =  $req->file('image')->store('public');
             $photoName = (explode('/', $photoPath))[1];
             $host = $_SERVER['HTTP_HOST'];
-            $location = "http://" . $host . "/public/storage/" . $photoName;
-           
+            $location = "http://" . $host . "/storage/" . $photoName;
+
             $result = ProductModel::insert([
                 'title' => $title,
                 'description' => $description,
