@@ -143,10 +143,9 @@
 @endsection
 @section('script')
 <script type="text/javascript">
+
+
     getBranddata();
-
-
-
 
 
     // for brand table
